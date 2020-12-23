@@ -1,6 +1,16 @@
-# Getting Started with Create React App
+## Random Joke Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small practice tech assignment.
+
+### Instructions:
+
+- The main page should display a programming joke with a set up.
+- After a few seconds it will display the punchline of the joke
+- When the user refreshes the a page a different programming joke is displayed.
+
+
+
+
 
 ## Available Scripts
 
