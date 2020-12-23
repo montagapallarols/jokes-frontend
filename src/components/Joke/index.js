@@ -4,8 +4,9 @@ import axios from "axios";
 import { Button } from 'react-bootstrap';
 import Loading from "../Loading";
 import Spinner from 'react-bootstrap/Spinner'
+import {FacebookShareButton, FacebookIcon} from "react-share";
 
-export default function Joke() {
+export default function Joke(props) {
   const [ joke, setJoke ] = useState(null)
   const [ delayedPunchline, setDelayedPunchline ] = useState(null)
   const [ newJoke, setNewJoke ] = useState(false)
@@ -42,7 +43,13 @@ return (
     <div>
         <h4 className="setup">{joke.setup}</h4>
         {delayedPunchline === null ? <Loading/> : <h5 className="punchline">{delayedPunchline}</h5>}
-        <Button onClick={showNewJoke} variant="info">Tell me another</Button>
+        <Button className="button" onClick={showNewJoke} variant="info">Tell me another</Button>
+        <FacebookShareButton 
+                url={"http://www.camperstribe.com"}
+                quote={`${joke.setup} ${joke.punchline}`}
+                hashtag="#joke">
+                 <FacebookIcon size={36} />
+              </FacebookShareButton>
     </div>
 )
 }
