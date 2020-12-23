@@ -13,9 +13,9 @@ export default function Joke(props) {
 
   useEffect(() => {
     async function fetchJoke() {
-      const response = await axios.get("https://official-joke-api.appspot.com/random_joke");
-      console.log("Random joke", response.data)
-      setJoke(response.data)
+      const response = await axios.get("https://official-joke-api.appspot.com/jokes/programming/random");
+      console.log("Random joke", response.data[0])
+      setJoke(response.data[0])
     }
     fetchJoke()
   }, [newJoke])

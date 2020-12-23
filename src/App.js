@@ -7,7 +7,7 @@ import Joke from './components/Joke';
 function App() {
   return (
     <div className="App">
-    <h1 className="app-title">Random Joke Generator</h1>
+    <h1 className="app-title">Programming Jokes Generator</h1>
     <Joke/>
     </div>
   );
